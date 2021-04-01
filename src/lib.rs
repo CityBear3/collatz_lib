@@ -1,17 +1,12 @@
-pub fn collatz(arg: u128) -> u128{
-    let mut n = arg;
+use std::process::exit;
 
-    while n > 1 {
-        n = if n % 2 == 0 {
-            n / 2
-        } else {
-            3 * n + 1
-        };
-
-        println!("{}", n);
+pub fn collatz(arg: u128) -> u128 {
+    match arg {
+        0 => exit(-1),
+        1 => arg,
+        n if n % 2 == 0 => collatz(n / 2),
+        _ => collatz(3 * arg + 1),
     }
-
-    n
 }
 
 
