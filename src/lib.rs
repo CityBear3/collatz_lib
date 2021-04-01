@@ -1,5 +1,16 @@
 use std::process::exit;
 
+
+///This function can test collatz problem.
+///
+/// # EXAMPLE
+///
+///```
+///use collatz_lib::collatz;
+///
+///let n = collatz(7878);
+///```
+
 pub fn collatz(arg: u128) -> u128 {
     match arg {
         0 => exit(-1),
