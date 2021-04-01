@@ -3,7 +3,7 @@ use std::process::exit;
 
 ///This function can test collatz problem.
 ///
-/// # EXAMPLE
+/// # Example
 ///
 ///```
 ///use collatz_lib::collatz;
